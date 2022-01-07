@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Spark Foundation </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel = "icon" href = "img/tsp.png" type = "image/x-icon">
+    
+    <style>
+        nav a.active {
+            background: #0b63d6;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: underline;
+            margin: 0 20px;
+        }
+
+        .contact-image {
+            display: flex;
+            justify-content: center;
+            text-align: center;   
+        }
+
+        .contact-image img {
+            border-radius: 60px;
+            width: 11%;
+            margin-top: -3%;
+            transform: rotate(29deg);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/img1.jpg" alt="background"
+        style="position: absolute; z-index: -1; opacity: 0.7; background-size: cover; width: 100vw; height: 100vh;">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl text-black underline">Oxfam</span>
+        </a>
+        <nav
+            class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-white" href="index.html">Home</a>
+            <a class="mr-5 hover:text-white" href="contact.html">Contact Us</a>
+            <a class="mr-5 hover:text-white" href="about.html">About Us</a>
+        </nav>
+    </div>
+    <section class="text-gray-600 body-font relative">
+        <div class="container px-1 py-2 mx-auto"
+            style="width: 60%; background-color: aliceblue; height: 490px; border-radius:30px;" >
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-1 text-gray-900 underline mt-1">Contact Us
+                </h1>
+            </div>
+            <div class="contact-image">
+                <img src="https://www.bing.com/th?id=OIP.vJTaI_BacVnUj7vRP6RLIQHaHh&w=106&h=105&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                    alt="rocket_contact" />
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="name" class="leading-7 text-sm text-black">Name:</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="email" class="leading-7 text-sm text-black">Email:</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="message" class="leading-7 text-sm text-black">Message:</label>
+                            <textarea id="message" name="message"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button
+                            class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('a');
+        const menuLength = menuItem.length;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                menuItem[i].className = "active"
+            }
+        }
+    </script>
+</body>
+
+</html>
